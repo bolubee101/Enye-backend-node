@@ -16,7 +16,11 @@ app.use("/api", rates);
 
 const PORT = process.env.PORT || 3333;
 
-
+app.get("/",(req,res)=>{
+  res.json({
+    message:"app is up"
+  })
+})
 let server=app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
